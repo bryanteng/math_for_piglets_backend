@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create(name: "Bryan")
+Question.create(num1: 1, num2: 1, operation: "add", user_id: 1)
+Piggy.create(name: "B", user_id: 1)

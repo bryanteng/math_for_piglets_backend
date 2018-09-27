@@ -1,4 +1,4 @@
-class API::V1::PiggiesController < ApplicationController
+class Api::V1::PiggiesController < ApplicationController
 
   def index
     @piggies = Piggy.all
@@ -29,7 +29,7 @@ class API::V1::PiggiesController < ApplicationController
     else
       render json: {errors: @piggy.errors.full_messages}, status: :unprocessable_entity
     end
-    
+
   end
 
   # come back to make logic changes
