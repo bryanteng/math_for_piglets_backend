@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_175807) do
+ActiveRecord::Schema.define(version: 2018_09_28_134421) do
 
   create_table "piggies", force: :cascade do |t|
     t.string "name"
@@ -22,13 +22,20 @@ ActiveRecord::Schema.define(version: 2018_09_27_175807) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.integer "num1"
-    t.integer "num2"
+    t.string "equation"
     t.string "operation"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_questions_on_user_id"
+  end
+
+  create_table "user_questions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "question_id"
+    t.boolean "answeredCorrectly", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

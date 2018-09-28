@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users
       resources :questions
       resources :piggies
+      resources :user_questions
     end
   end
 end

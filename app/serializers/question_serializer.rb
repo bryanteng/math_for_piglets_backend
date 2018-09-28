@@ -1,4 +1,5 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :num1, :num2, :operation, :user_id
-  belongs_to :user
+  attributes :id, :equation, :operation, :user_id
+  has_many :user_questions
+  has_many :users, through: :user_questions
 end

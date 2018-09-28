@@ -22,7 +22,7 @@ class Api::V1::QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:num1, :num2, :operation, :user_id)
+    params.require(:question).permit(:equation, :operation, :user_id)
   end
 
 

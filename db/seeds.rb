@@ -5,6 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(name: "Bryan")
-Question.create(num1: 1, num2: 1, operation: "add", user_id: 1)
-Piggy.create(name: "B", user_id: 1)
+User.destroy_all
+Question.destroy_all
+Piggy.destroy_all
+UserQuestion.destroy_all
+
+
+bryan = User.create(name: "Bryan")
+q = Question.create(equation:"1+2*3", operation: "pemdas", user_id: bryan.id)
+Piggy.create(name: "B", user_id: bryan.id)
+UserQuestion.create(user_id: bryan.id, question_id: q.id)
