@@ -12,6 +12,7 @@ UserQuestion.destroy_all
 
 
 bryan = User.create(name: "Bryan")
+scarlett = User.create(name: "Scarlett")
 q1 = Question.create(equation:"1+2*3", operation: "pemdas", user_id: bryan.id)
 q2 = Question.create(equation:"3*3/2", operation: "pemdas", user_id: bryan.id)
 q3 = Question.create(equation:"12*6", operation: "multiplication", user_id: bryan.id)
