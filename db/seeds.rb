@@ -21,7 +21,7 @@ q5 = Question.create(equation:"19-8", operation: "subtraction", user_id: bryan.i
 q6 = Question.create(equation:"(12-3)*2", operation: "pemdas", user_id: bryan.id)
 q7 = Question.create(equation:"0-7", operation: "subtraction", user_id: bryan.id)
 q8 = Question.create(equation:"8*7", operation: "multiplication", user_id: bryan.id)
-q9 = Question.create(equation:"2-9", operation: "multiplication", user_id: bryan.id)
+q9 = Question.create(equation:"2*9", operation: "multiplication", user_id: bryan.id)
 q10 = Question.create(equation:"7*2-(2*6)", operation: "pemdas", user_id: bryan.id)
 q11 = Question.create(equation:"9/3", operation: "division", user_id: bryan.id)
 q12 = Question.create(equation:"9+3", operation: "addition", user_id: bryan.id)
@@ -39,6 +39,46 @@ q23 = Question.create(equation:"15-8", operation: "subtraction", user_id: bryan.
 q24 = Question.create(equation:"9-6", operation: "subtraction", user_id: bryan.id)
 q25 = Question.create(equation:"8-3", operation: "subtraction", user_id: bryan.id)
 
+#Creating more addition problems
+20.times do
+x = rand(100)
+y = rand (100)
+Question.find_or_create_by(equation:"#{x}+#{y}", operation: "addition", user_id: bryan.id)
+end
+
+#Creating more subtraction problems
+20.times do
+  x = rand(100)
+  y = rand(100)
+    while x < y
+      x = rand(100)
+    end
+Question.find_or_create_by(equation:"#{x}-#{y}", operation: "subtraction", user_id: bryan.id)
+end
+
+#Creating more multiplication problems
+20.times do
+
+x = rand(12)
+y = rand(12)
+
+while x == 0
+  x = rand(12)
+end
+Question.find_or_create_by(equation:"#{x}*#{y}", operation: "multiplication", user_id: bryan.id)
+end
+
+#Creating more division problems
+20.times do
+x = rand(10..100)
+y = rand(2..12)
+
+until x%y == 0
+  x = rand(100)
+  y = rand(2..12)
+end
+Question.find_or_create_by(equation:"#{x}/#{y}", operation: "division", user_id: bryan.id)
+end
 
 Piggy.create(name: "B", user_id: bryan.id)
 UserQuestion.create(user_id: bryan.id, question_id: q16.id)
