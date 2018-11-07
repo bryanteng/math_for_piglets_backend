@@ -22,8 +22,8 @@
 - Math.js library
 - Postgres
 
-## Back-End Repository
-https://github.com/bryanteng/math_for_piglets_backend
+## Front-End Repository
+https://github.com/bryanteng/math-for-piglets
 
 ## Server-Side Install Instructions
 1. Run `bundle install`
