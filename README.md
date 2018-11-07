@@ -1,24 +1,51 @@
-# README
+# Math for Piglets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Math for Piglets*, a math-learning application with a built-in reward system, directed towards children.
 
-Things you may want to cover:
+![Screenshot](app_demo.png)
 
-* Ruby version
+## Application Features
+- User can choose a math operation and solve the given question.
 
-* System dependencies
+- User can return to questions answered incorrectly.
 
-* Configuration
+- User can earn money for their virtual piggy bank for each correct question.
 
-* Database creation
+- User can use the built-in calculator to solve equations.
 
-* Database initialization
 
-* How to run the test suite
+## Built With
+- React
+- Ruby
+- Rails API utilizing Active Model Serializers
+- Sqlite3 Database using ActiveRecord
+- Math.js library
+- Postgres
 
-* Services (job queues, cache servers, search engines, etc.)
+## Back-End Repository
+https://github.com/bryanteng/math_for_piglets_backend
 
-* Deployment instructions
+## Server-Side Install Instructions
+1. Run `bundle install`
+2. Run `rake db:create`
+3. Run `rake db:migrate`
+4. Run `rake db:seed`
+5. Run `rails s -p 3000`
 
-* ...
+## Client-Side Install Instructions
+1. run `cd math-front-end`
+2. Run `npm install`
+3. Run `npm start`
+
+## Contributing
+[Contributing Guide](./CONTRIBUTING.md)
+
+## Authors
+- **Scarlett Perry**
+- **Bryan Teng**
+
+## License
+[License](./LICENSE.md)
+
+## Acknowledgments
+- Big thank you to Tony Lam & Eric Kim
